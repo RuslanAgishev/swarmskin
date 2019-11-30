@@ -3,10 +3,8 @@
 import rospy
 import crazyflie
 import time
-import uav_trajectory
 
 import swarmlib
-import message_filters
 from geometry_msgs.msg import PoseStamped, TransformStamped
 import os
 from multiprocessing import Process
@@ -62,7 +60,7 @@ rospy.init_node('test_high_level')
 TAKEOFFHEIGHT  = 1.8
 data_recording = 0
 toFly          = 1
-PATH = "~/Desktop/Swarm/Swarmskin/data/"
+PATH = "~/Desktop/"
 
 
 cf_names = ['cf1', 'cf2', 'cf3', 'cf4']
@@ -138,90 +136,3 @@ if data_recording:
 
 land_detector()
 
-
-
-
-
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    # cf.goTo(goal = [0.0, -0.4, 0.0], yaw=0.0, duration = 2.0, relative = True)
-    # time.sleep(2.0)
-
-    # cf.goTo(goal = [0.0, 0.8, 0.0], yaw=0.0, duration = 4.0, relative = True)
-    # time.sleep(4.0)
-
-    # cf.goTo(goal = [0.0, -0.4, 0.0], yaw=0.0, duration = 2.0, relative = True)
-    # time.sleep(2.0)
-
-
-
-
-
-
-    # time_to_sleep = 1.5
-    # cf.goTo(goal = [.5, .5, 0.0], yaw=-.75*3.14, duration = 2.0, relative = True)
-    # time.sleep(3.0)
-    # for i in range(2):
-    #     cf.goTo(goal = [0.0, -1.0, 0.0], yaw=-1.57, duration = 2.0, relative = True)
-    #     time.sleep(time_to_sleep)
-    #     cf.goTo(goal = [-1.0, 0.0, 0.0], yaw=-1.57, duration = 2.0, relative = True)
-    #     time.sleep(time_to_sleep)
-    #     cf.goTo(goal = [0.0, 1.0, 0.0], yaw=-1.57, duration = 2.0, relative = True)
-    #     time.sleep(time_to_sleep)
-    #     cf.goTo(goal = [1.0, 0.0, 0.0], yaw=-1.57, duration = 2.0, relative = True)
-    #     time.sleep(time_to_sleep)
-    # cf.goTo(goal = [0, 0.0, 0.0], yaw=0, duration = 2.0, relative = False)
-    # time.sleep(3.0)
-
-
-
-    # traj1 = uav_trajectory.Trajectory()
-    # traj1.loadcsv("takeoff.csv")
-
-    # traj2 = uav_trajectory.Trajectory()
-    # traj2.loadcsv("figure8.csv")
-
-    # print(traj1.duration)
-
-    # cf.uploadTrajectory(0, 0, traj1)
-    # cf.uploadTrajectory(1, len(traj1.polynomials), traj2)
-
-    # cf.startTrajectory(0, timescale=1.0)
-    # time.sleep(traj1.duration * 2.0)
-
-    # cf.startTrajectory(1, timescale=2.0)
-    # time.sleep(traj2.duration * 2.0)
-
-    # cf.startTrajectory(0, timescale=1.0, reverse=True)
-    # time.sleep(traj1.duration * 1.0)
-
-    # cf.stop()

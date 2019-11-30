@@ -3,10 +3,8 @@
 import rospy
 import crazyflie
 import time
-import uav_trajectory
 
 import swarmlib
-import message_filters
 from geometry_msgs.msg import PoseStamped, TransformStamped
 import os
 import sys

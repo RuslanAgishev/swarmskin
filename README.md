@@ -2,6 +2,10 @@
 
 A system for landing of a fleet of nano quadrotors on the human arms using light-sensitive landing pads
 with vibrotactile feedback. The package contatins a software for drones control and tools to analyse the flight data.
+Please, have a look at the [video](https://www.youtube.com/watch?v=2a4XrG_u3RE) for more information.
+You can also access the project description at [SIGGRAPH Asia 2019 webpage](https://sa2019.siggraph.org/attend/emerging-technologies/session_slot/231).
+
+<img src="https://github.com/RuslanAgishev/swarmskin/blob/master/figures/swarmcloak.jpg" width=600 />
 
 ## Setup
 The flight software from this repository requires external positioning system for drones to work.

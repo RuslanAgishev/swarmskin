@@ -64,9 +64,11 @@ to specify in the [crazyflie_firmware](https://github.com/bitcraze/crazyflie-fir
 Perform the following two steps to do this.
 1.  Disable optical flow:
     this [line](https://github.com/bitcraze/crazyflie-firmware/blob/master/src/deck/drivers/src/flowdeck_v1v2.c#L70)
-    in firmware should be set as ```True```.
+    in firmware should be set as ```true```:
+    ```static bool useFlowDisabled = true;```
 2.  Disable Z-ranger (version 2):
-    comment this [line](https://github.com/bitcraze/crazyflie-firmware/blob/05315e2ba4b77098b9e05e5f9ad5b48566d658ad/src/deck/drivers/src/zranger2.c#L142)
+    comment this [line](https://github.com/bitcraze/crazyflie-firmware/blob/05315e2ba4b77098b9e05e5f9ad5b48566d658ad/src/deck/drivers/src/zranger2.c#L142):
+    ```// rangeEnqueueDownRangeInEstimator(distance, stdDev, xTaskGetTickCount()); ```
 
 In case these links are out-dated, you can download the custom modified [firmware](https://drive.google.com/file/d/1nC26jyhbdd_0MYyDwPrm6ZsK9FyMb7pb/view?usp=sharing).
 
